@@ -1,0 +1,7 @@
+{   
+    "packageManager" : "npm",
+    "typescript": true,
+    "type": "API",
+    "location": "./"
+ 
+}
