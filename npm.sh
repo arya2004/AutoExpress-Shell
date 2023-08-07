@@ -12,3 +12,26 @@ npm_install()
     npm i eslint --save-dev 
 
 }
+
+install_dependencies()
+{
+    pkgManager="$1"
+    if [ "$pkgManager" = "npm" ]; then
+        a="install"
+    elif [ "$pkgManager" = "yarn" ]; then
+        a="add"
+    else
+        echo "grrrr"
+        exit 1
+    fi
+    
+    $pkgManager init -y
+    $pkgManager $a express
+    $pkgManager $a dotenv
+    $pkgManager $a cors
+    $pkgManager $a mongoose
+    $pkgManager $a express-rate-limit
+    
+}
+
+install_dependencies yar
