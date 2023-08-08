@@ -22,17 +22,18 @@ create_express_api() {
   mkdir server
   cd server
 
-  #npm_install
+
   install_dependencies yarn
-  create_MVC
+  #create_MVC
+  create_folders
   create_files
   create_git_ignore
   readme
   index
-  connectionString
+  mongo_connection_string mongodb://localhost:27017/$project_name
+  basic_model
 
-
-
+  clear
   catto
 
   echo "Express API starter project created successfully."

@@ -2,6 +2,6 @@
     "packageManager" : "npm",
     "typescript": false,
     "type": "API",
-    "location": "./"
- 
+    "location": "./",
+    "MongoDbLocalhostUrl": "mongodb://localhost:27017/"
 }

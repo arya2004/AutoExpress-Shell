@@ -2,11 +2,20 @@
 
 index()
 {
-    cat <<EOF > index.js
+    tee -a app.js <<EOF
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
+
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
+EOF
+    mongoose_connection
 
+    tee -a app.js <<EOF
 app.get('/', (req, res) => {
 res.send('Hello, Express API!');
 });
@@ -15,7 +24,7 @@ app.listen(port, () => {
 console.log(\`Server running on port \${port}\`);
 });
 EOF
-
+ 
 }
 
 readme()
