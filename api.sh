@@ -3,6 +3,8 @@
 source ./folders.sh
 source ./npm.sh
 source ./cat.sh
+source ./mongo.sh
+
 
 create_express_api() {
   echo "Creating Express API starter project..."
@@ -20,12 +22,14 @@ create_express_api() {
   mkdir server
   cd server
 
-  npm_install
-  create_folders
+  #npm_install
+  install_dependencies yarn
+  create_MVC
   create_files
   create_git_ignore
   readme
   index
+  connectionString
 
 
 

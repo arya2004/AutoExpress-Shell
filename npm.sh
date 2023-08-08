@@ -34,4 +34,3 @@ install_dependencies()
     
 }
 
-install_dependencies yar
