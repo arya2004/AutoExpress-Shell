@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source ./folders.sh
-source ./npm.sh
-source ./cat.sh
-source ./mongo.sh
+. ./folders.sh
+. ./npm.sh
+. ./cat.sh
+. ./mongo.sh 
 
 
 create_express_api() {
